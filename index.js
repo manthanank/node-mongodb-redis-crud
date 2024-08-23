@@ -19,6 +19,11 @@ mongoose
 // Set up routes
 app.use("/api/users", userRoutes); // No need to pass redisClient here
 
+// Start server
+app.get("/", (req, res) => {
+  res.send("API is running...");
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
